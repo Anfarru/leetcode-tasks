@@ -7,6 +7,7 @@ public class MergeSortedArray {
         for(int i = m, j = 0; j < n; i++, j++){
             nums1[i] = nums2[j];
         }
+
         Arrays.sort(nums1);
     }
 
@@ -17,6 +18,7 @@ public class MergeSortedArray {
         int m = nums1.length - n;
 
         merge(nums1, m, nums2, n);
+
         for(int el : nums1){
             System.out.printf("%d ", el);
         }
