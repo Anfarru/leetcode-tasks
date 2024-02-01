@@ -16,7 +16,7 @@ public class MergeSortedArray {
 
         merge(nums1, m, nums2, n);
         for(int el : nums1){
-            System.out.printf("%d ", el);;
-        };
+            System.out.printf("%d ", el);
+        }
     }
 }
