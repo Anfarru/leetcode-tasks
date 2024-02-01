@@ -1,7 +1,10 @@
 public class RemoveElement {
 
+    //Rearranges array so elements with value val are at the end
+    //Returns count - count of values unequal to val
+    //val - value not be counted
     static int removeElement(int[] nums, int val){
-        int k = 0;
+        int count = 0;
 
         for(int i = 0; i < nums.length; i++){
             if(nums[i] == val){
@@ -19,19 +22,19 @@ public class RemoveElement {
             if (el == val) {
                 break;
             }
-            k++;
+            count++;
         }
 
-        return k;
+        return count;
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 2, 4, 5, 5, 5, 6, 7};
+        int[] nums = new int[]{1, 2, 2, 4, 5, 5, 5, 6, 7, 5};
         int val = 5;
 
-        int k = removeElement(nums, val);
+        int count = removeElement(nums, val);
 
-        System.out.println(k);
+        System.out.println(count);
         for(int el : nums){
             System.out.printf("%d ", el);
         }
